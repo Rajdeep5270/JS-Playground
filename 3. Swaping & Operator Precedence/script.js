@@ -18,3 +18,8 @@
 
 // console.log(`First value ${a}`);
 // console.log(`Second value ${b}`);
+
+let x = +prompt("Enter X value");
+let y = +prompt("Enter Y value");
+
+console.log(`(x+y)^2 = ${(x * x) + (2 * x * y) + (y * y)}`);
