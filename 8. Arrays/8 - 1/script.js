@@ -1,33 +1,51 @@
-let a = [1, 2, 3, 4, 5, "Hello", "JS"];
+// Q.1 Write a Program to find the length of a 1D array.
+// console.log("Q.1 Write a Program to find the length of a 1D array.");
+// let size = +prompt("Enter array size");
+// let arr = new Array(size);
 
-// console.log(a);
-// pushes a data from back side 
-a.push(12);
-// removes a data from front sidew 
-a.pop();
-// removes a data from front side 
-a.shift();
-// adds a data from front side 
-a.unshift(10);
-
-// slice method cuts a piece of array and returns a new array without changing original array 
-let newA = a.slice(1, 4);
-// splice method cuts a piece of array and return a new array and also modifies new array 
-let newArray = a.splice(1, 4);
-
-// for loop
-// for (let i = 0; i <= a.length; i++) {
-//     console.log(a[i]);
+// for (let i = 0; i < size; i++) {
+//     arr[i] = +prompt(`Enter arr[${i}]`)
 // }
 
-a.forEach((ele, i, array) => {
-    console.log(`${i} => ${ele} => ${array}`);
-})
+// console.log(`Length of array = ${arr.length}`);
+// console.log("\n\n\n");
 
-newA.forEach((ele, i) => {
-    console.log(`${i} => ${ele}`);
-})
+// Q.2 Write a Program to find the average of a 1D array.
+// let size = +prompt("Enter array size");
+// let arr = new Array(size);
+// let sum = 0;
 
-newArray.forEach((ele, i) => {
-    console.log(`${i} => ${ele}`);
+// for (let i = 0; i < size; i++) {
+//     arr[i] = +prompt(`Enter arr[${i}]`);
+// }
+
+// for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+// }
+
+// let avg = sum / arr.length;
+
+// console.log(`Average = ${avg}`);
+
+// Q.3 Write a Program to perform the addition operation of two 1D arrays & store it in another array. Keep in mind that both array sizes must be the same.
+
+let size = +prompt("Enter number of elements");
+let arr1 = new Array(size);
+let arr2 = new Array(size);
+let arr3 = new Array(size);
+
+for (let i = 0; i < size; i++) {
+    arr1[i] = +prompt(`Enter arr1[${i}]`);
+};
+
+for (let i = 0; i < size; i++) {
+    arr2[i] = +prompt(`Enter arr2[${i}]`);
+};
+
+for (let i = 0; i < size; i++) {
+    arr3[i] = arr1[i] + arr2[i];
+}
+
+arr3.forEach(e => {
+    console.log(e);
 })
